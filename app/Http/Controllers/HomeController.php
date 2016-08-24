@@ -37,7 +37,7 @@ class HomeController extends Controller
     public function handleAankoop(Request $request){
       $input = $request::all();
       $prijs = 0;
-      if($input['voornaam'] == "lid"){
+      if($input['gridRadios'] == "lid"){
         $prijs = 23.00;
       }
       else {
@@ -49,7 +49,6 @@ class HomeController extends Controller
         'prijs' => $prijs,
         'rnummer' => $input['rnummer'],
         'lid' => $input['gridRadios'],
-
       ));
       return $input['achternaam'];
 
