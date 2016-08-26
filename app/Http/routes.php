@@ -28,4 +28,4 @@ Route::get('/ledenlijst', 'HomeController@getledenlijst');
 Route::post('/aankoop', 'HomeController@handleAankoop');
 Route::post('/lidToevoegen', 'HomeController@handleLidToevoegen');
 
-Route::get('/api/aankoopwebhook', 'Apicontroller@gethook');
+Route::get('/api/aankoopwebhook', 'APIcontroller@gethook');
