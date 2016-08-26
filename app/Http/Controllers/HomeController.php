@@ -10,6 +10,7 @@ use App\Coupon;
 use App\Lid;
 use Auth;
 use DB;
+use Mollie;
 
 class HomeController extends Controller
 {
