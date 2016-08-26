@@ -77,7 +77,7 @@ class HomeController extends Controller
         'prijs' => $prijs,
         'rnummer' => $input['rnummer'],
         'lid' => $input['gridRadios'],
-        'order_id' => $payment,
+        'order_id' => $payment->id,
       ));
       $aankoop->save();
 
