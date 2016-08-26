@@ -5,8 +5,8 @@
   <div class="container">
     <div class="row">
         <div class="col-md-8 offset-md-2">
-    <h1 class="display-3 class="display-3 text-xs-center"">Bevestig aankoop</h1>
-    <p class="lead">Kijk alle gegevens nog eens goed na, check op fouten! </p>
+    <h1 class="display-3 text-xs-center">Bevestig Lidmaatschap</h1>
+    <p class="lead">Kijk alle gegevens nog eens goed na, check op fouten! <br> Een email wordt verstuurd naar het lid met de coupon code voor een goedkopere codex </p>
   </div>
 </div>
 </div>
@@ -15,7 +15,7 @@
   <div class="row">
       <div class="col-md-8 offset-md-2">
 <div class="card card-block" style="margin-top:5%;">
-  <h4 class="card-title">Bevestig Aankoop Codex</h4>
+  <h4 class="card-title">Bevestig Lidmaatschap</h4>
 
   <table class="table table-striped">
     <thead>
@@ -23,20 +23,18 @@
           <th>Nummer</th>
           <th>Voornaam</th>
           <th>Achternaam</th>
-          <th>R-nummer</th>
-          <th>Lid</th>
-          <th>Betaald</th>
+          <th>GSM-Nummer</th>
+          <th>E-Mail</th>
         </tr>
       </thead>
       <tbody>
 
         <tr>
-<th scope="row">{{$aankoop->id}}</th>
-<td>{{$aankoop->voornaam}}</td>
-<td>{{$aankoop->achternaam}}</td>
-<td>{{$aankoop->rnummer}}</td>
-<td>{{$aankoop->lid}}</td>
-<td>{{$aankoop->prijs}}</td>
+<th scope="row">{{$lid->id}}</th>
+<td>{{$lid->voornaam}}</td>
+<td>{{$lid->achternaam}}</td>
+<td>{{$lid->gsmnummer}}</td>
+<td>{{$lid->email}}</td>
 </tr>
 
       </tbody>

@@ -5,7 +5,7 @@
   <div class="container">
     <div class="row">
         <div class="col-md-8 offset-md-2">
-    <h1 class="display-3">Nieuw Lid toevoegen</h1>
+    <h1 class="display-3 text-xs-center">Nieuw Lid toevoegen</h1>
     <p class="lead">Door een nieuw lid toe te voegen wordt er automatisch een couponcode naar die persoon gestuurd voor een goedkopere codex, via mail</p>
   </div>
 </div>

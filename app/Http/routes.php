@@ -23,6 +23,7 @@ Route::get('/lijst', 'HomeController@getLijst');
 Route::get('/aankoop', 'HomeController@getAankoop');
 Route::get('/bevestig', 'HomeController@getBevestig');
 Route::get('/lidToevoegen', 'HomeController@getLidToevoegen');
-
+Route::get('/ledenlijst', 'HomeController@getledenlijst');
 
 Route::post('/aankoop', 'HomeController@handleAankoop');
+Route::post('/lidToevoegen', 'HomeController@handleLidToevoegen');

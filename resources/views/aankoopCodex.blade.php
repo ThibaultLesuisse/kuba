@@ -5,7 +5,7 @@
   <div class="container">
     <div class="row">
         <div class="col-md-8 offset-md-2">
-    <h1 class="display-3">Nieuwe Aankoop</h1>
+    <h1 class="display-3 text-xs-center">Nieuwe Aankoop</h1>
     <p class="lead">Vul al je gegevens in voor de aanloop van een codex</p>
   </div>
 </div>

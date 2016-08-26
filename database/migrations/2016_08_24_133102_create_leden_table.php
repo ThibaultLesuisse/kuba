@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCouponTable extends Migration
+class CreateLedenTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,15 @@ class CreateCouponTable extends Migration
      */
     public function up()
     {
-      Schema::create('coupons', function (Blueprint $table) {
+        Schema::create('leden', function (Blueprint $table) {
           $table->increments('id');
-          $table->string('couponcode');
+          $table->string('voornaam');
+          $table->string('achternaam');
+          $table->bigInteger('gsmnummer');
+          $table->string('email');
+          $table->string('geregistreerddoor');
           $table->timestamps();
-      });
-
+        });
     }
 
     /**
@@ -27,6 +30,6 @@ class CreateCouponTable extends Migration
      */
     public function down()
     {
-        //
+          Schema::drop('leden');
     }
 }

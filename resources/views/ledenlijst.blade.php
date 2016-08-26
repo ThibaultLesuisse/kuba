@@ -4,9 +4,8 @@
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
     <div class="row">
-        <div class="col-md-8 offset-md-2">
-    <h1 class="display-3 text-xs-center">Lijst aankopen</h1>
-    <p class="lead">Overzicht van alle aankopen </p>
+        <div class="col-md-10 offset-md-1 text-center">
+    <h1 class="display-3 text-xs-center">Ledenlijst</h1>
   </div>
 </div>
 </div>
@@ -14,30 +13,30 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-md-8 offset-md-2">
+      <div class="col-md-10 offset-md-1">
         <div class="card card-block" style="margin-top:5%;">
-            <h4 class="card-title">Overzicht aankopen</h4>
+            <h4 class="card-title">Overzicht Leden</h4>
                 <table class="table table-striped">
                   <thead>
                       <tr>
                         <th>Nummer</th>
                         <th>Voornaam</th>
                         <th>Achternaam</th>
-                        <th>Lid</th>
-                        <th>Betaald</th>
-                        <th>Aanpassen</th>
+                        <th>GSM-nummer</th>
+                        <th>E-mail</th>
+                        <th>Deregistreerd Door</th>
                         <th>Verwijderen</th>
                       </tr>
                     </thead>
                     <tbody>
-                      @foreach ($aankopen as $aankoop)
+                      @foreach ($leden as $lid)
                       <tr>
-      <th scope="row">{{$aankoop->id}}</th>
-      <td>{{$aankoop->voornaam}}</td>
-      <td>{{$aankoop->achternaam}}</td>
-      <td>{{$aankoop->lid}}</td>
-      <td>{{$aankoop->prijs}}</td>
-      <td><button type="button" class="btn btn-primary" id="lijstAanpassen" data-toggle="modal" data-target="#aanpassenLijst">Pas aan</button></td>
+      <th scope="row">{{$lid->id}}</th>
+      <td>{{$lid->voornaam}}</td>
+      <td>{{$lid->achternaam}}</td>
+      <td>{{$lid->gsmnummer}}</td>
+      <td>{{$lid->email}}</td>
+      <td>{{$lid->geregistreerddoor}}</td>
       <td><button type="button" class="btn btn-danger" id="lijstVerwijderen">Verwijder</button></td>
     </tr>
   @endforeach

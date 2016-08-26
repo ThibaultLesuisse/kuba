@@ -30,6 +30,8 @@
         body {
           /* Margin bottom by footer height */
           margin-bottom: 60px;
+          background-color:#ecf0f1;
+
         }
         .footer {
           position: absolute;
@@ -44,7 +46,7 @@
     </style>
 </head>
 <body style="height:100%;">
-    <nav class="navbar navbar-light">
+    <nav class="navbar navbar-static-top bg-faded">
 
                 <!-- Collapsed Hamburger -->
                 <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2" aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation">
@@ -70,20 +72,22 @@
                           <li class="nav-item"><a  class="nav-link" href="{{ url('/aankoop') }}">Aankoop</a></li>
                           <li class="nav-item"><a  class="nav-link" href="{{ url('/lijst') }}">Lijst</a></li>
                           <li class="nav-item"><a  class="nav-link" href="{{ url('/lidToevoegen') }}">Lid Toevoegen</a></li>
-                          <li class="nav-item"><a  class="nav-link" href="{{ url('/overzicht') }}">Overzicht</a></li>
+                          <li class="nav-item"><a  class="nav-link" href="{{ url('/ledenlijst') }}">Ledenlijst</a></li>
 
                           <li class="nav-item"><a  class="nav-link" href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Uitloggen</a></li>
 
                     @endif
                 </ul>
-
+              </div>
     </nav>
 
     @yield('content')
-    <footer class="footer">
+    <footer class="footer" style="width:100%;position:absolute;">
    <div class="container">
+     <div class="col-md-12">
      <span class="text-muted">Made with Love by Thibault, care for this baby please</span>
    </div>
+ </div>
  </footer>
 
     <!-- JavaScripts -->

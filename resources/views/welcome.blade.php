@@ -23,7 +23,7 @@
                 <li><a href="{{ url('/login') }}">Inloggen</a></li>
                 <li><a href="{{ url('/register') }}">Registreren</a></li>
             @else
-            <li><a href="{{ url('/') }}">Overzichtspagina</a></li>
+            <li><a href="{{ url('/home') }}">Overzichtspagina</a></li>
             <li><a href="{{ url('/logout') }}">Logout</a></li>
             @endif
           </ul>
