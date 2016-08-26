@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c284a9c122da36c99a8b6597bdce7aa6",
-    "content-hash": "8b1485987e7c5949da82435d403e52e8",
+    "hash": "c3bc0481521add9cf7f054db069b8805",
+    "content-hash": "a16d8062fa61a3c85fd732439144daed",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -2945,6 +2945,48 @@
             "time": "2015-06-21 13:59:46"
         },
         {
+            "name": "sofort/sofortlib-php",
+            "version": "3.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sofort/sofortlib-php.git",
+                "reference": "2d58dd73813f6d309b624900cd7cce1f354a1d89"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sofort/sofortlib-php/zipball/2d58dd73813f6d309b624900cd7cce1f354a1d89",
+                "reference": "2d58dd73813f6d309b624900cd7cce1f354a1d89",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.10"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.5.1"
+            },
+            "suggest": {
+                "ext-curl": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Sofort\\SofortLib\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3"
+            ],
+            "authors": [
+                {
+                    "name": "Sofort GmbH",
+                    "email": "opensource@sofort.com"
+                }
+            ],
+            "description": "SOFORT API wrapper for PHP",
+            "time": "2016-01-21 09:22:08"
+        },
+        {
             "name": "symfony/css-selector",
             "version": "v3.0.9",
             "source": {
@@ -3159,7 +3201,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.5.9"
+        "php": ">=7.0.8"
     },
     "platform-dev": []
 }

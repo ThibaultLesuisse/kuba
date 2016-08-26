@@ -60,7 +60,7 @@
             <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li class="nav-item"><a  class="nav-link" href="{{ url('/home') }}">Home</a></li>
+                    <li class="nav-item"><a  class="nav-link" href="{{ url('/') }}">Terug</a></li>
 
                     <!-- Authentication Links -->
                     @if (Auth::guest())
@@ -69,7 +69,9 @@
                     @else
                           <li class="nav-item"><a  class="nav-link" href="{{ url('/aankoop') }}">Aankoop</a></li>
                           <li class="nav-item"><a  class="nav-link" href="{{ url('/lijst') }}">Lijst</a></li>
+                          <li class="nav-item"><a  class="nav-link" href="{{ url('/lidToevoegen') }}">Lid Toevoegen</a></li>
                           <li class="nav-item"><a  class="nav-link" href="{{ url('/overzicht') }}">Overzicht</a></li>
+
                           <li class="nav-item"><a  class="nav-link" href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Uitloggen</a></li>
 
                     @endif
@@ -90,6 +92,8 @@
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js" integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD" crossorigin="anonymous"></script>
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
+    <script src="assets/js/aanpassingen.js"></script>
+
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

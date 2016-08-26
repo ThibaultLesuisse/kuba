@@ -17,11 +17,13 @@
         <div class="inner">
           <h2>Menu</h2>
           <ul class="links">
-            <li><a href="{{ url('/home') }}">Home</a></li>
+            <li><a href="{{ url('/') }}">Home</a></li>
+              <li><a href="{{ url('/aankoopCodex') }}">Aankoop Codex</a></li>
             @if (Auth::guest())
                 <li><a href="{{ url('/login') }}">Inloggen</a></li>
                 <li><a href="{{ url('/register') }}">Registreren</a></li>
             @else
+            <li><a href="{{ url('/') }}">Overzichtspagina</a></li>
             <li><a href="{{ url('/logout') }}">Logout</a></li>
             @endif
           </ul>

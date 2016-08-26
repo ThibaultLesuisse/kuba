@@ -25,6 +25,8 @@
                         <th>Achternaam</th>
                         <th>Lid</th>
                         <th>Betaald</th>
+                        <th>Aanpassen</th>
+                        <th>Verwijderen</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -35,6 +37,8 @@
       <td>{{$aankoop->achternaam}}</td>
       <td>{{$aankoop->lid}}</td>
       <td>{{$aankoop->prijs}}</td>
+      <td><button type="button" class="btn btn-primary" id="lijstAanpassen" data-toggle="modal" data-target="#aanpassenLijst">Pas aan</button></td>
+      <td><button type="button" class="btn btn-danger" id="lijstVerwijderen">Verwijder</button></td>
     </tr>
   @endforeach
                     </tbody>
@@ -43,7 +47,4 @@
           </div>
       </div>
     </div>
-
-
-
 @endsection

@@ -15,8 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/aankoopCodex' , 'AankoopController@getAankoop');
+
 Route::auth();
 Route::get('/home', 'HomeController@index');
 Route::get('/lijst', 'HomeController@getLijst');
 Route::get('/aankoop', 'HomeController@getAankoop');
+Route::get('/bevestig', 'HomeController@getBevestig');
+Route::get('/lidToevoegen', 'HomeController@getLidToevoegen');
+
+
 Route::post('/aankoop', 'HomeController@handleAankoop');

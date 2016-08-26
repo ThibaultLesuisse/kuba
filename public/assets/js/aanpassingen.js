@@ -1,0 +1,3 @@
+$( "#lijstAanpassen" ).click(function() {
+  
+});

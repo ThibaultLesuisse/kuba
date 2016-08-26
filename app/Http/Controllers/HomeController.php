@@ -43,14 +43,28 @@ class HomeController extends Controller
       else {
           $prijs = 35.00;
       }
-      Aankoop::create(array(
+      $aankoop = Aankoop::create(array(
         'voornaam' =>  $input['voornaam'],
         'achternaam' => $input['achternaam'],
         'prijs' => $prijs,
         'rnummer' => $input['rnummer'],
         'lid' => $input['gridRadios'],
       ));
-      return $input['achternaam'];
+      $aankoop->save();
+
+      return view('bevestiging', compact('aankoop'));
 
     }
+    public function getBevestig(){
+
+
+    }
+
+    public function getLidToevoegen(){
+
+      return view('lidToevoegen');
+    }
+
+
+
 }
