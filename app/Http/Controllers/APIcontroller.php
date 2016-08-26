@@ -10,6 +10,6 @@ class APIcontroller extends Controller
 {
     //
     public function gethook(){
-      return  response()->json([succes], 200);
+      return  response()->json(['succes'], 200);
     }
 }
