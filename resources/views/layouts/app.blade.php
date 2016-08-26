@@ -46,7 +46,7 @@
     </style>
 </head>
 <body style="height:100%;">
-    <nav class="navbar navbar-static-top bg-faded">
+    <nav class="navbar navbar-static-top navbar-dark bg-primary">
 
                 <!-- Collapsed Hamburger -->
                 <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2" aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,19 +62,18 @@
             <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li class="nav-item"><a  class="nav-link" href="{{ url('/') }}">Terug</a></li>
+                    <li class="nav-item active"><a  class="nav-link" href="{{ url('/home') }}">Overzicht</a></li>
 
                     <!-- Authentication Links -->
                     @if (Auth::guest())
-                        <li class="nav-item"><a  class="nav-link" href="{{ url('/login') }}">Login</a></li>
-                        <li class="nav-item"><a  class="nav-link" href="{{ url('/register') }}">Registreer</a></li>
+                        <li class="nav-item active"><a  class="nav-link" href="{{ url('/login') }}">Login</a></li>
+                        <li class="nav-item active"><a  class="nav-link" href="{{ url('/register') }}">Registreer</a></li>
                     @else
-                          <li class="nav-item"><a  class="nav-link" href="{{ url('/aankoop') }}">Aankoop</a></li>
-                          <li class="nav-item"><a  class="nav-link" href="{{ url('/lijst') }}">Lijst</a></li>
-                          <li class="nav-item"><a  class="nav-link" href="{{ url('/lidToevoegen') }}">Lid Toevoegen</a></li>
-                          <li class="nav-item"><a  class="nav-link" href="{{ url('/ledenlijst') }}">Ledenlijst</a></li>
-
-                          <li class="nav-item"><a  class="nav-link" href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Uitloggen</a></li>
+                          <li class="nav-item active"><a  class="nav-link" href="{{ url('/aankoop') }}">Aankoop</a></li>
+                          <li class="nav-item active"><a  class="nav-link" href="{{ url('/lijst') }}">Aankooplijst</a></li>
+                          <li class="nav-item active"><a  class="nav-link" href="{{ url('/lidToevoegen') }}">Lid Toevoegen</a></li>
+                          <li class="nav-item active"><a  class="nav-link" href="{{ url('/ledenlijst') }}">Ledenlijst</a></li>
+                          <li class="nav-item active"><a  class="nav-link" href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i></a></li>
 
                     @endif
                 </ul>
@@ -85,7 +84,7 @@
     <footer class="footer" style="width:100%;position:absolute;">
    <div class="container">
      <div class="col-md-12">
-     <span class="text-muted">Made with Love by Thibault, care for this baby please</span>
+     <span class="text-muted">Made with Love by Thibault, care for this baby </span>
    </div>
  </div>
  </footer>

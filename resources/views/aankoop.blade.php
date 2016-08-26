@@ -6,14 +6,14 @@
     <div class="row">
         <div class="col-md-8 offset-md-2">
     <h1 class="display-3 text-xs-center">Nieuwe Aankoop</h1>
-    <p class="lead">Gebruik deze form voor een nieuwe aankoop, de R van het r-nummer moet er niet bij! </p>
+    <p class="lead text-xs-center">Gebruik deze form voor een nieuwe aankoop, de R van het r-nummer moet er niet bij! </p>
   </div>
 </div>
 </div>
 </div>
 <div class="container">
   <div class="row">
-      <div class="col-md-8 offset-md-2">
+      <div class="col-md-10 offset-md-1">
 <div class="card card-block" style="margin-top:5%;">
   <h4 class="card-title">Aankoop Codex</h4>
                 <form method="POST" action="/aankoop">

@@ -20,6 +20,7 @@ class CreateAankoopsTable extends Migration
             $table->string('lid');
             $table->double('prijs', 5, 2);
             $table->integer('aantal');
+            $table->integer('order_id');
             $table->timestamps();
         });
     }

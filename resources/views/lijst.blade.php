@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-md-8 offset-md-2">
     <h1 class="display-3 text-xs-center">Lijst aankopen</h1>
-    <p class="lead">Overzicht van alle aankopen </p>
+    <p class="lead text-xs-center">Overzicht van alle aankopen </p>
   </div>
 </div>
 </div>
@@ -14,10 +14,10 @@
 
 <div class="container">
   <div class="row">
-      <div class="col-md-8 offset-md-2">
+      <div class="col-md-12 ">
         <div class="card card-block" style="margin-top:5%;">
             <h4 class="card-title">Overzicht aankopen</h4>
-                <table class="table table-striped">
+                <table class="table table-striped ">
                   <thead>
                       <tr>
                         <th>Nummer</th>
@@ -25,8 +25,6 @@
                         <th>Achternaam</th>
                         <th>Lid</th>
                         <th>Betaald</th>
-                        <th>Aanpassen</th>
-                        <th>Verwijderen</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -37,8 +35,6 @@
       <td>{{$aankoop->achternaam}}</td>
       <td>{{$aankoop->lid}}</td>
       <td>{{$aankoop->prijs}}</td>
-      <td><button type="button" class="btn btn-primary" id="lijstAanpassen" data-toggle="modal" data-target="#aanpassenLijst">Pas aan</button></td>
-      <td><button type="button" class="btn btn-danger" id="lijstVerwijderen">Verwijder</button></td>
     </tr>
   @endforeach
                     </tbody>

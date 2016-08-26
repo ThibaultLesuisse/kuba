@@ -9,6 +9,7 @@ use App\Aankoop;
 use App\Coupon;
 use App\Lid;
 use Auth;
+use DB;
 
 class HomeController extends Controller
 {
@@ -29,7 +30,22 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $aantalCodexen = Aankoop::all()->count();
+        $aantalLeden = Lid::all()->count();
+        $prijstotaal = Aankoop::all()->sum('prijs');
+        $bestelid =  DB::table('leden')
+                     ->select(DB::raw('voornaam, achternaam, geregistreerddoor, count(geregistreerddoor) as aantal'))
+                     ->groupBy('geregistreerddoor')
+                     ->orderBy('aantal', 'desc')
+                     ->first();
+        $besteliddata = (string)$bestelid->geregistreerddoor;
+        $data = array(
+          'aantalcodexen' => $aantalCodexen,
+          'aatalleden' => $aantalLeden,
+          'prijstotaal' => $prijstotaal,
+          'bestelid' => $besteliddata ,
+      );
+        return view('home', ['data' => $data]);
     }
     public function getAankoop(){
       return view('aankoop');
@@ -47,12 +63,20 @@ class HomeController extends Controller
       else {
           $prijs = 35.00;
       }
+
+      $payment = Mollie::api()->payments()->create([
+        "amount"      => $prijs,
+        "description" => "Aankoop van een vrg codex",
+        "redirectUrl" => "http://kuba-codexen.tk/succes",
+]);
+      $payment = Mollie::api()->payments()->get($payment->id);
       $aankoop = Aankoop::create(array(
         'voornaam' =>  $input['voornaam'],
         'achternaam' => $input['achternaam'],
         'prijs' => $prijs,
         'rnummer' => $input['rnummer'],
         'lid' => $input['gridRadios'],
+        'order_id' => $payment,
       ));
       $aankoop->save();
 

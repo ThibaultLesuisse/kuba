@@ -5,15 +5,15 @@
   <div class="container">
     <div class="row">
         <div class="col-md-8 offset-md-2">
-    <h1 class="display-3 text-xs-center">Nieuw Lid toevoegen</h1>
-    <p class="lead">Door een nieuw lid toe te voegen wordt er automatisch een couponcode naar die persoon gestuurd voor een goedkopere codex, via mail</p>
+    <h1 class="display-3 text-xs-center">Nieuw lid toevoegen</h1>
+    <p class="lead text-xs-center">Door een nieuw lid toe te voegen wordt er automatisch een couponcode naar die persoon gestuurd voor een goedkopere codex, via mail</p>
   </div>
 </div>
 </div>
 </div>
 <div class="container">
   <div class="row">
-      <div class="col-md-8 offset-md-2">
+      <div class="col-md-10 offset-md-1">
 <div class="card card-block" style="margin-top:5%;">
   <h4 class="card-title">Toevoegen Lid</h4>
                 <form method="POST" action="/lidToevoegen">
@@ -35,7 +35,7 @@
         <label for="gsmnummer" class="col-sm-2 col-form-label">GSM-nummer</label>
         <div class="col-sm-10">
            <div class="input-group">
-           <div class="input-group-addon">R-</div>
+           <div class="input-group-addon">04</div>
           <input type="number" class="form-control" id="gsmnummer" name="gsmnummer" placeholder="GSM-nummer">
         </div>
       </div>
@@ -44,10 +44,7 @@
       <div class="form-group row">
         <label for="email" class="col-sm-2 col-form-label">E-mail</label>
         <div class="col-sm-10">
-           <div class="input-group">
-           <div class="input-group-addon">R-</div>
           <input type="email" class="form-control" id="email" name="email" placeholder="E-mail">
-        </div>
       </div>
       </div>
 
