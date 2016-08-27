@@ -52,6 +52,7 @@ class AankoopController extends Controller
     public function succesAankoop(){
       $payment = Session::get('order');
       $payment = Mollie::api()->payments()->get($payment->id);
+      $aankoop = Session::get('aankoop');
       if ($payment->isPaid())
         {
           Mail::send('emails.succes', ['aankoop' => $aankoop],  function ($m) use ($aankoop){
@@ -60,7 +61,7 @@ class AankoopController extends Controller
            });
         }
 
-      $aankoop = Session::get('aankoop');
+
       return view('bevestigingAankoopCodex', ['aankoop' => $aankoop]);
     }
 }
