@@ -37,7 +37,7 @@ class AankoopController extends Controller
         ));
         $aankoop->save();
         Session::put('aankoop', $aankoop);
-        Session::put('order', 'payment');
+        Session::put('order', $payment);
         $url = $payment->getPaymentUrl();
 
         return redirect($url);
@@ -50,7 +50,8 @@ class AankoopController extends Controller
 
     }
     public function succesAankoop(){
-      $payment = Mollie::api()->payments()->get(Session::get('order')->id);
+      $payment = Session::get('order');
+      $payment = Mollie::api()->payments()->get($payment->id);
       if ($payment->isPaid())
         {
           Mail::send('emails.succes', ['aankoop' => $aankoop],  function ($m) use ($aankoop){
