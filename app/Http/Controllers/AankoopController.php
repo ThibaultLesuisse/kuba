@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
+use Request;
+use Mollie;
+use App\Aankoop;
 use App\Http\Requests;
+use Session;
+use Mail;
 
 class AankoopController extends Controller
 {
@@ -13,5 +16,41 @@ class AankoopController extends Controller
 
     public function getAankoop(){
       return view('aankoopCodex');
+    }
+    public function handleAankoop(Request $request){
+      $input = $request::all();
+      $prijs = 35.00;
+
+
+      $payment = Mollie::api()->payments()->create([
+        "amount"      => $prijs,
+        "description" => "Aankoop van een vrg codex",
+        "redirectUrl" => "http://kuba-codexen.tk/bevestigingAankoopCodex",
+        "webhookUrl"   => "http://kuba-codexen.tk/api/aankoopwebhook",
+]);
+      $payment = Mollie::api()->payments()->get($payment->id);
+      $aankoop = Aankoop::create(array(
+        'voornaam' =>  $input['voornaam'],
+        'achternaam' => $input['achternaam'],
+        'email' => $input['email'],
+        'prijs' => $prijs,
+        'rnummer' => $input['rnummer'],
+        'order_id' => $payment->id,
+      ));
+      $aankoop->save();
+      Session::put('aankoop', $aankoop);
+      $url = $payment->getPaymentUrl();
+      Mail::send('emails.succes', ['aankoop' => $aankoop],  function ($m) use ($aankoop){
+           $m->from('noreply@kuba-codexen.tk', 'kuba-codexen');
+           $m->to($aankoop->email)->subject('Bevestiging Codex');
+       });
+
+
+      return redirect($url);
+
+    }
+    public function succesAankoop(){
+      $aankoop = Session::get('aankoop');
+      return view('bevestigingAankoopCodex', compact('aankoop'));
     }
 }

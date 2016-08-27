@@ -70,18 +70,19 @@
       <section id="footer">
         <div class="inner">
           <h2 class="major">Contacteer ons</h2>
-          <form method="post" action="#">
+          <form method="post" action="/welcome">
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <div class="field">
               <label for="name">Naam</label>
-              <input type="text" name="name" id="name" />
+              <input type="text" name="naam" id="name" />
             </div>
             <div class="field">
               <label for="email">Email</label>
               <input type="email" name="email" id="email" />
             </div>
             <div class="field">
-              <label for="message">Bericht</label>
-              <textarea name="message" id="message" rows="4"></textarea>
+              <label for="bericht">Bericht</label>
+              <textarea name="bericht" id="bericht" rows="4"></textarea>
             </div>
             <ul class="actions">
               <li><input type="submit" value="Verstuur" /></li>

@@ -11,11 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'WelcomeController@getWelcome');
+Route::post('/welcome', 'WelcomeController@handleContactForm');
 
 Route::get('/aankoopCodex' , 'AankoopController@getAankoop');
+Route::post('/aankoopCodex' , 'AankoopController@handleAankoop');
+
+Route::get('/bevestigingAankoopCodex', 'AankoopController@succesAankoop');
+
 
 Route::auth();
 Route::get('/home', 'HomeController@index');
@@ -29,3 +32,4 @@ Route::post('/aankoop', 'HomeController@handleAankoop');
 Route::post('/lidToevoegen', 'HomeController@handleLidToevoegen');
 
 Route::get('/api/aankoopwebhook', 'APIcontroller@gethook');
+Route::post('/api/getcoupon', 'APIcontroller@checkCoupon');

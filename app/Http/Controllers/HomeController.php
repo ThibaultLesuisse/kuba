@@ -68,7 +68,8 @@ class HomeController extends Controller
       $payment = Mollie::api()->payments()->create([
         "amount"      => $prijs,
         "description" => "Aankoop van een vrg codex",
-        "redirectUrl" => "http://kuba-codexen.tk/succes",
+        "redirectUrl" => "http://kuba-codexen.tk/bevestig",
+        "webhookUrl"   => "http://kuba-codexen.tk/api/aankoopwebhook",
 ]);
       $payment = Mollie::api()->payments()->get($payment->id);
       $aankoop = Aankoop::create(array(
@@ -80,12 +81,12 @@ class HomeController extends Controller
         'order_id' => $payment->id,
       ));
       $aankoop->save();
-
-      return view('bevestiging', compact('aankoop'));
+      $url = $payment->getPaymentUrl();
+      return redirect($url);
 
     }
     public function getBevestig(){
-
+      return view('bevestiging');
 
     }
     public function getledenlijst(){

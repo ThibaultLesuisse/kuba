@@ -18,6 +18,7 @@ class CreateAankoopsTable extends Migration
             $table->string('achternaam');
             $table->integer('rnummer');
             $table->string('lid');
+            $table->string('email');
             $table->double('prijs', 5, 2);
             $table->integer('aantal');
             $table->integer('order_id');
