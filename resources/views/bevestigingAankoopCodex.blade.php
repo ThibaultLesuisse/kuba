@@ -5,7 +5,7 @@
   <div class="container">
     <div class="row">
         <div class="col-md-8 offset-md-2">
-    <h1 class="display-3" class="display-3 text-xs-center">Success</h1>
+    <h1 class="display-3 text-xs-center">Order wordt verwerkt</h1>
     <p class="lead text-xs-center">Order wordt verwerkt! Indien order gelukt is krijg je een mail! (check zeker je spamfolder!)</p>
   </div>
 </div>
