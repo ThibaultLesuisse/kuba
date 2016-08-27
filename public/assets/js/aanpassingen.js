@@ -4,25 +4,30 @@ $.ajaxSetup({
         }
     });
 var data = {};
-
+$('#prijs').val('35.00');
   console.log('script herkent');
   function checkCoupon(){
-    data['coupon'] = $("#coupon").text();
+    data['coupon'] = $("#coupon").val();
     $.ajax({
      url: '/api/getcoupon',
      data: data,
+     dataType: 'json',
      error: function() {
+        $('#coupon').removeClass('form-control-success');
+        $('#divcoupon').removeClass('has-success');
         $('#coupon').addClass('form-control-danger');
         $('#divcoupon').addClass('has-danger');
         $('#couponfeedback').text('De coupon blijkt niet te werken, probeer opnieuw met een andere');
      },
-     dataType: 'json',
-     success: function(data) {
-       console.log('HEt werkt');
-        $('#coupon').addClass('form-control-succes');
-        $('#divcoupon').addClass('has-succes');
+      success: function(data) {
+       console.log('Het werkt');
+          $('#coupon').removeClass('form-control-danger');
+          $('#divcoupon').removeClass('has-danger');
+          $('#coupon').addClass('form-control-success');
+          $('#divcoupon').addClass('has-success');
           $('#couponfeedback').text('');
-          $('#prijsAankoop').html('€ 25.00');
+          $('#prijsAankoop').html('€ 25,00');
+          $('#prijs').val('25.00');
      },
      type: 'POST'
   });     // The function returns the product of p1 and p2
