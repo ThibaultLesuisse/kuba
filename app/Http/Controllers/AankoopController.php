@@ -37,7 +37,7 @@ class AankoopController extends Controller
         ));
         $aankoop->save();
         Session::put('aankoop', $aankoop);
-        Session::put('order', 'payment')
+        Session::put('order', 'payment');
         $url = $payment->getPaymentUrl();
 
         return redirect($url);
