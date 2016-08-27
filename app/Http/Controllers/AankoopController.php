@@ -37,6 +37,7 @@ class AankoopController extends Controller
         ));
         $aankoop->save();
         Session::put('aankoop', $aankoop);
+        Session::put('order', 'payment')
         $url = $payment->getPaymentUrl();
 
         return redirect($url);
@@ -49,7 +50,7 @@ class AankoopController extends Controller
 
     }
     public function succesAankoop(){
-      $payment = Mollie::api()->payments()->get($payment->id);
+      $payment = Mollie::api()->payments()->get(Session::get('order')->id);
       if ($payment->isPaid())
         {
           Mail::send('emails.succes', ['aankoop' => $aankoop],  function ($m) use ($aankoop){
@@ -57,7 +58,7 @@ class AankoopController extends Controller
                $m->to($aankoop->email)->subject('Bevestiging Codex');
            });
         }
-      
+
       $aankoop = Session::get('aankoop');
       return view('bevestigingAankoopCodex', ['aankoop' => $aankoop]);
     }
