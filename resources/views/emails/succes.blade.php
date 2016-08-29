@@ -283,13 +283,9 @@
               <center>
                 <table cellpadding="0" cellspacing="0" width="600" class="w320">
                   <tr>
-                    <td class="pull-left mobile-header-padding-left" style="vertical-align: middle;">
-                      <a href=""><img width="137" height="47" src="http://s3.amazonaws.com/swu-filepicker/0zxBZVuORSxdc9ZCqotL_logo_03.gif" alt="logo"></a>
-                    </td>
                     <td class="pull-right mobile-header-padding-right" style="color: #4d4d4d;">
-                      <a href=""><img width="44" height="47" src="http://s3.amazonaws.com/swu-filepicker/k8D8A7SLRuetZspHxsJk_social_08.gif" alt="twitter" /></a>
-                      <a href=""><img width="38" height="47" src="http://s3.amazonaws.com/swu-filepicker/LMPMj7JSRoCWypAvzaN3_social_09.gif" alt="facebook" /></a>
-                      <a href=""><img width="40" height="47" src="http://s3.amazonaws.com/swu-filepicker/hR33ye5FQXuDDarXCGIW_social_10.gif" alt="rss" /></a>
+                      <a href="https://www.facebook.com/KUBAbrussel/?fref=ts"><img width="38" height="47" src="http://s3.amazonaws.com/swu-filepicker/LMPMj7JSRoCWypAvzaN3_social_09.gif" alt="facebook" /></a>
+
                     </td>
                   </tr>
                 </table>
@@ -316,17 +312,6 @@
           <tr>
             <td class="free-text">
               We hebben je betaling correct ontvragen met referentie: {{$aankoop->order_id}}. Print deze mail af ter bevestiging
-            </td>
-          </tr>
-          <tr>
-            <td class="button">
-              <div><!--[if mso]>
-                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="http://" style="height:45px;v-text-anchor:middle;width:155px;" arcsize="15%" strokecolor="#ffffff" fillcolor="#ff6f6f">
-                  <w:anchorlock/>
-                  <center style="color:#ffffff;font-family:Helvetica, Arial, sans-serif;font-size:14px;font-weight:regular;">Track Order</center>
-                </v:roundrect>
-              <![endif]--><a href="http://"
-              style="background-color:#ff6f6f;border-radius:5px;color:#ffffff;display:inline-block;font-family:'Cabin', Helvetica, Arial, sans-serif;font-size:14px;font-weight:regular;line-height:45px;text-align:center;text-decoration:none;width:155px;-webkit-text-size-adjust:none;mso-hide:all;">Track Order</a></div>
             </td>
           </tr>
           <tr>
@@ -399,9 +384,6 @@
                     <td class="item-col item">
                       <table cellspacing="0" cellpadding="0" width="100%">
                         <tr>
-                          <td class="mobile-hide-img">
-                            <img width="110" height="92" src="http://kuba-codexen.tk/images/pic01.jpg" alt="item1">
-                          </td>
                           <td class="product">
                             <span style="color: #4d4d4d; font-weight:bold;">VRG-CODEX</span> <br />
                           </td>
