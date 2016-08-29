@@ -9,7 +9,7 @@ use App\Http\Requests;
 class APIcontroller extends Controller
 {
     //
-    public function gethook(){
+    public function gethook(Request $request){
       return  response()->json(['succes'], 200);
     }
     public function checkCoupon(Request $request){

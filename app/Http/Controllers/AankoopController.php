@@ -36,6 +36,7 @@ class AankoopController extends Controller
           'order_id' => $payment->id,
         ));
         $aankoop->save();
+        $aankoop->datum = date('d-m-Y');
         Session::put('aankoop', $aankoop);
         Session::put('order', $payment);
         $url = $payment->getPaymentUrl();
