@@ -342,7 +342,7 @@
                               <td class="mini-block">
                                 <span class="header-sm">U gegevens</span><br />
                                 {{$aankoop->voornaam}} {{$aankoop->achternaam}} <br />
-                                {{$aankoop-rnummer}}<br />
+                                {{$aankoop->rnummer}}<br />
                               </td>
                             </tr>
                           </table>
