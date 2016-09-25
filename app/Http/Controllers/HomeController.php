@@ -99,24 +99,42 @@ class HomeController extends Controller
     }
     public function handleLidToevoegen(Request $request){
       $input = $request::all();
+      $albetaald = false;
+      if( isset($input['betaald']) == true ){
+      $albetaald = true;
+      }
+      else{
+        $albetaald = false;
+      }
+
       $lid = Lid::create(array(
         'voornaam' =>  $input['voornaam'],
         'achternaam' => $input['achternaam'],
         'gsmnummer' => $input['gsmnummer'],
         'email' => $input['email'],
         'geregistreerddoor' => Auth::user()->name,
+        'betaald' => $albetaald,
       ));
+
     $coupon= Coupon::create(array(
         'couponcode' =>  substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', ceil(15/strlen($x)) )),1,15),
         'leden_id' => $lid->id,
       ));
       $lid->save();
       $coupon->save();
+      if($albetaald == true){
       Mail::send('emails.coupon', ['coupon' => $coupon],  function ($m) use ($lid) {
            $m->from('noreply@kuba-codexen.tk', 'kuba-codexen');
 
-           $m->to($lid->email, $lid->voornaam)->subject('Je couponcode!');
+           $m->to($lid->email, $lid->voornaam)->subject('Je couponcode voor een goedkopere codex!');
        });
+     }
+     Mail::send('emails.info', ['lid' => $lid],  function ($m) use ($lid) {
+          $m->from('noreply@kuba-codexen.tk', 'kuba-codexen');
+          $m->to($lid->email, $lid->voornaam)->subject('Handige info in verband met KUBA');
+      });
+
+
       return view('bevestigingLid', compact('lid'));
 
 

@@ -49,13 +49,13 @@
               <a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
               <div class="content">
                 <h2 class="major">Aankoop informatie</h2>
-                <p>De verkoop van VRG codexen gebeurt ieder jaar door KUBA, leden van KUBA krijgen hierop korting   </p><br>
+                <p>De verkoop van VRG codexen gebeurt ieder jaar door KUBA, leden van KUBA krijgen hierop korting<br>Leden hebben een code gekregen via mail die ze kunnen invullen</p><br>
                   <div class="row">
                     <div class="12u 12u$(medium)">
                       <h4>Prijzen</h4>
                       <ul class="alt">
-                        <li>Lid €22</li>
-                        <li>Niet Lid €32</li>
+                        <li>Lid €30</li>
+                        <li>Niet Lid €35</li>
                       </ul>
                     </div>
 

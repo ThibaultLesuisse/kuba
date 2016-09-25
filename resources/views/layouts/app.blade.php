@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Laravel</title>
+    <title>KUBA-CODEXEN</title>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
@@ -30,6 +30,8 @@
           /* Margin bottom by footer height */
           margin-bottom: 60px;
           background-color:#ecf0f1;
+          background-image: url("images/bg.jpg");
+          background-size: cover;
 
         }
         .footer {
@@ -83,7 +85,7 @@
     <footer class="footer" style="width:100%;position:absolute;">
    <div class="container">
      <div class="col-md-12">
-     <span class="text-muted">Made with Love by Thibault, care for this baby </span>
+     <span class="text-muted">KUBA ondernemingsnummer: 0652667468, contact: via formulier op hoofdpagina <br> warmoesberg 26, 1000 Brussel </span>
    </div>
  </div>
  </footer>

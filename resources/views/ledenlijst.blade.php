@@ -22,10 +22,7 @@
                         <th>Nummer</th>
                         <th>Voornaam</th>
                         <th>Achternaam</th>
-                        <th>GSM</th>
-                        <th>E-mail</th>
-                        <th>Deregistreerd Door</th>
-                        <th>Verwijderen</th>
+                        <th>betaald</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -34,10 +31,8 @@
       <th scope="row">{{$lid->id}}</th>
       <td>{{$lid->voornaam}}</td>
       <td>{{$lid->achternaam}}</td>
-      <td>{{$lid->gsmnummer}}</td>
-      <td>{{$lid->email}}</td>
-      <td>{{$lid->geregistreerddoor}}</td>
-      <td><button type="button" class="btn btn-danger" id="lijstVerwijderen">Verwijder</button></td>
+      <td>@if ($lid->betaald === 1) Ja @else Nee @endif</td>
+      <td><button type="button" class="btn btn-success" id="lijstVerwijderen">Betaald</button></td>
     </tr>
   @endforeach
                     </tbody>

@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Oxygen Confirm</title>
+  <title>Bevestiging VRG-CODEX</title>
 
   <style type="text/css">
     /* Take care of image borders and formatting, client hacks */
@@ -71,6 +71,7 @@
     .header-sm {
       padding: 5px 0;
       font-size: 18px;
+      font-weight: bold;
       line-height: 1.3;
     }
 
@@ -311,7 +312,7 @@
           </tr>
           <tr>
             <td class="free-text">
-              We hebben je betaling correct ontvragen met referentie: {{$aankoop->order_id}}. Print deze mail af ter bevestiging
+              We hebben je betaling correct ontvragen met referentie: {{$aankoop->order_id}}.<br /> Print deze mail af ter bevestiging,
             </td>
           </tr>
           <tr>
@@ -325,7 +326,7 @@
                           <table cellspacing="0" cellpadding="0" width="100%" style="border-collapse:separate !important;">
                             <tr>
                               <td class="mini-block">
-                                <span class="header-sm">U gegevens</span><br />
+                                <span class="header-sm">Uw gegevens</span><br />
                                 {{$aankoop->voornaam}} {{$aankoop->achternaam}} <br />
                                 {{$aankoop->rnummer}}<br />
                               </td>

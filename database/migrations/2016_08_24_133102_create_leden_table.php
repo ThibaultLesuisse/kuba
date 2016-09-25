@@ -19,6 +19,7 @@ class CreateLedenTable extends Migration
           $table->bigInteger('gsmnummer');
           $table->string('email');
           $table->string('geregistreerddoor');
+          $table->boolean('betaald');
           $table->timestamps();
         });
     }
