@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-md-8 offset-md-2">
     <h1 class="display-3 text-xs-center">Nieuwe Aankoop</h1>
-    <p class="lead text-xs-center">Vul al je gegevens in voor de aanloop van een codex</p>
+    <p class="lead text-xs-center">Vul al je gegevens in voor de aankoop van een codex</p>
   </div>
 </div>
 </div>
