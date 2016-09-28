@@ -18,7 +18,6 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>Nummer</th>
                             <th>Voornaam</th>
                             <th>Achternaam</th>
                             <th>R-nummer</th>
@@ -28,7 +27,6 @@
                     <tbody>
 
                         <tr>
-                            <th scope="row">{{$aankoop->id}}</th>
                             <td>{{$aankoop->voornaam}}</td>
                             <td>{{$aankoop->achternaam}}</td>
                             <td>{{$aankoop->rnummer}}</td>

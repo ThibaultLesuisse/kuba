@@ -6,6 +6,7 @@
     <div class="row">
         <div class="col-md-8 offset-md-2">
     <h1 class="display-3">Inloggen</h1>
+      <p class="lead text-xs-center">Dit is enkel voor het praesidium, om een codex te kopen hoef je je niet aan te melden</p>
     </div>
 </div>
 </div>
