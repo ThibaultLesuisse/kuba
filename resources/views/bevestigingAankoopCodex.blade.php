@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-8 offset-md-2">
                 <h1 class="display-3 text-xs-center">Order wordt verwerkt</h1>
-                <p class="lead text-xs-center">Order wordt verwerkt! Indien order gelukt is krijg je een mail! (check zeker je spamfolder!)</p>
+                <p class="lead text-xs-center">Order wordt verwerkt! Indien order gelukt en we de betaling hebben ontvangen krijg je een mail! (check zeker je spamfolder!)</p>
             </div>
         </div>
     </div>
@@ -13,7 +13,7 @@
     <div class="row">
         <div class="col-md-8 offset-md-2">
             <div class="card card-block" style="margin-top:5%;">
-                <h4 class="card-title">Bevestiging Order Codex</h4>
+                <h4 class="card-title">Overzicht bestelling</h4>
 
                 <table class="table table-striped">
                     <thead>

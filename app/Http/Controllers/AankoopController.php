@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Request;
 use Mollie;
 use App\Aankoop;
+use App\Coupon;
 use App\Http\Requests;
 use Session;
 use Mail;
@@ -19,7 +20,7 @@ class AankoopController extends Controller
     public function handleAankoop(Request $request){
       $input = $request::all();
       $prijs = $input['prijs'];
-      if($prijs == 25.00 || $prijs ==35.00){
+      if($prijs == 30.00 || $prijs ==35.00){
         $payment = Mollie::api()->payments()->create([
           "amount"      => $prijs,
           "description" => "Aankoop van een vrg codex",
@@ -39,6 +40,10 @@ class AankoopController extends Controller
         $aankoop->datum = date('d-m-Y');
         Session::put('aankoop', $aankoop);
         Session::put('order', $payment);
+        if($input['coupon'] !== null){  Session::put('coupon', $input['coupon']);
+
+        }
+
         $url = $payment->getPaymentUrl();
 
         return redirect($url);
@@ -52,6 +57,13 @@ class AankoopController extends Controller
     }
     public function succesAankoop(){
       $payment = Session::get('order');
+      if(Session::get('coupon') !== null){
+         $coupon = Coupon::where('couponcode', Session::get('coupon'));
+         $coupon->forceDelete();
+       }
+
+
+
       $payment = Mollie::api()->payments()->get($payment->id);
       $aankoop = Session::get('aankoop');
       if ($payment->isPaid())

@@ -307,12 +307,12 @@
         <table cellspacing="0" cellpadding="0" width="600" class="w320">
           <tr>
             <td class="header-lg">
-              Bevestiging aankoop VRG-codex
+            <h3>  Bevestiging aankoop VRG-codex <h3>
             </td>
           </tr>
           <tr>
             <td class="free-text">
-              We hebben je betaling correct ontvragen met referentie: {{$aankoop->order_id}}.<br /> Print deze mail af ter bevestiging,
+              We hebben je betaling correct ontvragen <br> referentie: {{$aankoop->order_id}}.<br /> Print deze mail af ter bevestiging,
             </td>
           </tr>
           <tr>

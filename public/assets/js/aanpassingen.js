@@ -26,8 +26,8 @@ $('#prijs').val('35.00');
           $('#coupon').addClass('form-control-success');
           $('#divcoupon').addClass('has-success');
           $('#couponfeedback').text('');
-          $('#prijsAankoop').html('€ 25,00');
-          $('#prijs').val('25.00');
+          $('#prijsAankoop').html('€ 30,00');
+          $('#prijs').val('30.00');
      },
      type: 'POST'
   });     // The function returns the product of p1 and p2
