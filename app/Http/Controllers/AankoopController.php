@@ -57,12 +57,6 @@ class AankoopController extends Controller
     }
     public function succesAankoop(){
       $payment = Session::get('order');
-      if(Session::get('coupon') !== null){
-         $coupon = Coupon::where('couponcode', Session::get('coupon'));
-         $coupon->forceDelete();
-       }
-
-
 
       $payment = Mollie::api()->payments()->get($payment->id);
       $aankoop = Session::get('aankoop');
@@ -72,6 +66,10 @@ class AankoopController extends Controller
                $m->from('noreply@kuba-codexen.tk', 'kuba-codexen');
                $m->to($aankoop->email)->subject('Bevestiging Codex');
            });
+           if(Session::get('coupon') !== null){
+              $coupon = Coupon::where('couponcode', Session::get('coupon'));
+              $coupon->forceDelete();
+            }
         }
 
 

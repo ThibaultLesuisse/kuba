@@ -67,8 +67,6 @@
 
                     <!-- Authentication Links -->
                     @if (Auth::guest())
-                        <li class="nav-item active"><a  class="nav-link" href="{{ url('/login') }}">Login</a></li>
-                        <li class="nav-item active"><a  class="nav-link" href="{{ url('/register') }}">Registreer</a></li>
                     @else
                           <li class="nav-item active"><a  class="nav-link" href="{{ url('/aankoop') }}">Aankoop</a></li>
                           <li class="nav-item active"><a  class="nav-link" href="{{ url('/lijst') }}">Aankooplijst</a></li>
