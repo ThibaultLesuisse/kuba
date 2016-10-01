@@ -31,7 +31,7 @@
  */
 return [
 
-    'test_mode' => env('MOLLIE_TEST_MODE', true),
+    'test_mode' => env('MOLLIE_TEST_MODE', false),
 
     'keys' => [
 
