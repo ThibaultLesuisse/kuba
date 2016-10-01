@@ -13,13 +13,9 @@
 
 Route::get('/', 'WelcomeController@getWelcome');
 Route::post('/welcome', 'WelcomeController@handleContactForm');
-
 Route::get('/aankoopCodex' , 'AankoopController@getAankoop');
 Route::post('/aankoopCodex' , 'AankoopController@handleAankoop');
-
 Route::get('/bevestigingAankoopCodex', 'AankoopController@succesAankoop');
-
-
 Route::auth();
 Route::get('/home', 'HomeController@index');
 Route::get('/lijst', 'HomeController@getLijst');
