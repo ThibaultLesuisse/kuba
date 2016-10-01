@@ -23,9 +23,10 @@ class APIcontroller extends Controller
                 $m->from('noreply@kuba-codexen.tk', 'kuba-codexen');
                 $m->to($aankoop->email)->subject('Bevestiging Codex');
             });
-            }
+
         }
       return  response()->json(['succes'], 200);
+
     }
     public function checkCoupon(Request $request){
       $couponmeegegeven = $request->coupon;
