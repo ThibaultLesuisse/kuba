@@ -41,19 +41,13 @@ class AankoopController extends Controller
         Session::put('aankoop', $aankoop);
         Session::put('order', $payment);
         if($input['coupon'] !== null){  Session::put('coupon', $input['coupon']);
-
         }
-
         $url = $payment->getPaymentUrl();
-
         return redirect($url);
       }
       else {
        return view('aankoopCodex');
       }
-
-
-
     }
     public function succesAankoop(){
       $payment = Session::get('order');
@@ -70,6 +64,8 @@ class AankoopController extends Controller
               $coupon = Coupon::where('couponcode', Session::get('coupon'));
               $coupon->forceDelete();
             }
+
+
         }
 
 
