@@ -15,16 +15,17 @@ class APIcontroller extends Controller
     //
     public function gethook(Request $request){
         $id = $request->id;
-        $aankoop = Aankoop::where('order_id', $id);
-        $payment = Mollie::api()->payments()->get($id);
-        if ($payment->isPaid())
-        {
-            Mail::send('emails.succes', ['aankoop' => $aankoop],  function ($m) use ($aankoop){
-                $m->from('noreply@kuba-codexen.tk', 'kuba-codexen');
-                $m->to($aankoop->email)->subject('Bevestiging Codex');
-            });
+        if($id !== null){  $aankoop = Aankoop::where('order_id', $id);
+          $payment = Mollie::api()->payments()->get($id);
+          if ($payment->isPaid())
+          {
+              Mail::send('emails.succes', ['aankoop' => $aankoop],  function ($m) use ($aankoop){
+                  $m->from('noreply@kuba-codexen.tk', 'kuba-codexen');
+                  $m->to($aankoop->email)->subject('Bevestiging Codex');
+              });
 
-        }
+          }}
+
       return  response()->json(['succes'], 200);
 
     }
